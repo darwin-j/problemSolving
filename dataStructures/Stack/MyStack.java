@@ -2,7 +2,7 @@ package dataStructures.Stack;
 
 public class MyStack {
 
-    private int[] data;
+    protected int[] data;
 
     private static final int DEFAULT_SIZE = 10;
 
@@ -17,8 +17,8 @@ public class MyStack {
     }
 
     public boolean push(int item) {
-        // System.out.println(++ptr);
-        if (isFull()) {
+
+        if (!isFull()) {
             data[++ptr] = item;
             return true;
         }
@@ -28,18 +28,35 @@ public class MyStack {
 
     }
 
-    public boolean isFull() {
-
-        if (ptr < data.length) {
-            return false;
+    public int pop() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Stack is Empty");
         }
 
-        return true;
+        return data[ptr--];
+
+    }
+
+    public int peek() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Stack is Empty");
+        }
+        return data[ptr];
+    }
+
+    public boolean isFull() {
+
+        return ptr == data.length - 1;
+    }
+
+    public boolean isEmpty() {
+
+        return ptr == -1;
     }
 
     public void display() {
-        for (int item : data) {
-            System.out.print(item + " ");
+        for (int i = 0; i <= ptr; i++) {
+            System.out.print(data[i] + " ");
         }
     }
 }
