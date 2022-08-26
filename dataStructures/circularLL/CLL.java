@@ -23,6 +23,17 @@ public class CLL {
         tail = node;
     }
 
+    public Node find(int val){
+Node tempNode = head;
+        do{
+            
+        }while();
+    }
+
+    public void delete(int val) {
+
+    }
+
     public void display() {
         Node tempNode = head;
         if (head != null) {
@@ -50,3 +61,4 @@ public class CLL {
         }
     }
 }
+
