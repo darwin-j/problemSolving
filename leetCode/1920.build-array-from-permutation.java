@@ -7,14 +7,14 @@
 // @lc code=start
 class Solution {
     public int[] buildArray(int[] nums) {
-
-        int[] resultArr = new int[nums.length];
-        
-        for(int i=0;i<nums.length;i++){
-            resultArr[i] = nums[nums[i]];
+        int[] result = new int[nums.length];
+        int i =0;
+        for(int num :nums){
+            result[i] = nums[num];
+            i++;
         }
 
-        return resultArr;
+        return result;
     }
 }
 // @lc code=end
