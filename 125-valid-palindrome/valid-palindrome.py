@@ -9,7 +9,6 @@ class Solution:
             elif(asscii_of_char >= 65 and asscii_of_char <= 90):
                 onlyAlphhaString.append(chr(asscii_of_char+32))
         onlyAlphhaString = ''.join(onlyAlphhaString)
-        print(onlyAlphhaString)
         if len(onlyAlphhaString)==0:
             return True
         else:
