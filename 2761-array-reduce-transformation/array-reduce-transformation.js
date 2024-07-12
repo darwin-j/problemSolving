@@ -12,7 +12,7 @@ var reduce = function(nums, fn, init) {
 
     let reducedValue = init
 
-    for(let i = 0;i<nums.length;i++){
+    for(i = 0;i<nums.length;i++){
         reducedValue = fn(reducedValue,nums[i])
     }
 
