@@ -1,14 +1,17 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        numsLength = len(nums)
-        removeDups = list(dict.fromkeys(nums))
-        uniqueNumsLength = len(removeDups)
-        for index,num in enumerate(nums):
-            if index < len(removeDups):
-                nums[index] = removeDups[index]
-            else:
-                nums[index] = '_'
-        return uniqueNumsLength
+        i = 0
+        x = 0
 
+        count = 0
 
+        while i < len(nums):
+            if nums[i] > nums[x]:
+                x += 1
+                nums[x] = nums[i]
+                count += 1
+            
+            i += 1
+
+        return count + 1
 
